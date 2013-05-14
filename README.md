@@ -18,6 +18,10 @@ Feel free to customise further or use as is.
 
 The directory `webapp` is sync'd to `/vagrant` so place your code in there and hack away.
 
+Jump onto the VM by `vagrant ssh`.
+
+E.g. `mvn -v` or `psql -h localhost -U postgres` to test installations
+
 You may want to edit Postgres config.
 
 Ports 8080 and 5432 are mapped to their respective ports on the VM.
