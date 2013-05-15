@@ -9,7 +9,7 @@ Build a basic Vagrant box set for Java development with Postgres and Maven insta
 * Add the box `precise64` via `vagrant box add precise64 http://files.vagrantup.com/precise64.box`
 * Clone this repo `git clone https://github.com/rob-murray/vagrant-javadev-box.git`
 * Init the submodules `git submodule update --init`
-* Download the Maven archive from [http://maven.apache.org](http://maven.apache.org) to `puppet/modules/maven/files` directory
+* Download the Maven archive `apache-maven-3.0.5-bin.tar.gz` from [http://maven.apache.org](http://maven.apache.org) to `puppet/modules/maven/files` directory
 * All done; `vagrant up`
 
 ## Usage
