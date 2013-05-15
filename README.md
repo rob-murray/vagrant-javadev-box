@@ -1,4 +1,4 @@
-vagrant-jdev-box
+vagrant-javadev-box
 ================
 
 Build a basic Vagrant box set for Java development with Postgres and Maven installed via puppet.
