@@ -1,0 +1,8 @@
+.DS_STORE
+*.box
+.vagrant
+.bashrc
+
+*.gz
+
+puppet/modules/maven/files/
