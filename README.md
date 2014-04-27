@@ -1,6 +1,8 @@
 vagrant-javadev-box
 ================
 
+[![Haz Commitz Status](http://haz-commitz.herokuapp.com/repos/rob-murray/vagrant-javadev-box/badge.svg)](http://haz-commitz.herokuapp.com/repos/rob-murray/vagrant-javadev-box)
+
 Build a basic Vagrant box set for Java development with Jdk, Postgres and Maven installed via puppet.
 
 ## Installation
