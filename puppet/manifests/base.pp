@@ -38,7 +38,7 @@ class { 'postgresql::server':
 # Install Maven to the vagrant users home dir and shell
 maven::setup { "maven":
   ensure        => 'present',
-  source        => 'apache-maven-3.1.1-bin.tar.gz',
+  source        => 'apache-maven-3.2.3-bin.tar.gz',
   deploymentdir => '/home/vagrant/apache-maven',
   user          => 'vagrant',
   pathfile      => '/home/vagrant/.bashrc'
