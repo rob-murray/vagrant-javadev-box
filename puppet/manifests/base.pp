@@ -1,7 +1,7 @@
 #
 # base.pp
 # Build Vagrant box configuration from modules
-# 
+#
 # vagrant-javadev-box
 # https://github.com/rob-murray/vagrant-javadev-box
 #
@@ -15,7 +15,7 @@ class { 'java':
 
 # Postgresql general config
 class { 'postgresql':
-  version => '9.2',
+  version => '9.3',
   manage_package_repo => true,
   charset => 'UTF8',
   locale  => 'en_US.UTF-8'
