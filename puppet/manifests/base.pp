@@ -28,12 +28,12 @@ class { 'postgresql::server':
     'ip_mask_allow_all_users'    => '0.0.0.0/0',
     'listen_addresses'           => '*',
     'manage_redhat_firewall'     => true,
-    'postgres_password'          => 'letmein',
+    'postgres_password'          => 'change_me',
   },
 }
 
 # Postgresql database config
-# no op
+# If necessary, config here to build application specific database
 
 # Install Maven to the vagrant users home dir and shell
 maven::setup { "maven":
