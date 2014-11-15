@@ -18,8 +18,8 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Forward ports
-  config.vm.network :forwarded_port, guest: 8080,    host: 8080    # Java app server; jetty
-  config.vm.network :forwarded_port, guest: 5432,    host: 5432    # Postgres DB
+  config.vm.network :forwarded_port, guest: 8080, host: 8080    # Java app server; jetty
+  config.vm.network :forwarded_port, guest: 5432, host: 5432    # Postgres DB
 
   # Share the working dir - host, guest
   config.vm.synced_folder "webapp", "/vagrant"
@@ -32,5 +32,4 @@ Vagrant.configure("2") do |config|
      puppet.module_path = "puppet/modules"
      puppet.options = "--verbose"
   end
-
 end
