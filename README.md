@@ -10,7 +10,7 @@ Build a basic Vagrant box set for Java development with Jdk, Postgres and Maven 
 
 All as git submodules unless otherwise stated. Also not listing dependancies, only major modules.
 
-* [Java : latest](https://github.com/puppetlabs/puppetlabs-java)
+* [Java : latest jdk](https://github.com/puppetlabs/puppetlabs-java)
 * [Postgresql: 9.3](https://github.com/puppetlabs/puppet-postgresql)
 * [Maven : 3.2.3](https://github.com/7terminals/puppet-maven)
 
@@ -36,7 +36,7 @@ Ports 8080 and 5432 are mapped to their respective ports on the VM.
 
 Jump onto the VM by `vagrant ssh`.
 
-Test it out with `mvn -v` or `psql -h localhost -U postgres`.
+Test it out with `java -version`, `mvn -v` or `psql -h localhost -U postgres`.
 
 You may want to edit Postgres config in the `puppet/manifests/base.pp` file.
 
