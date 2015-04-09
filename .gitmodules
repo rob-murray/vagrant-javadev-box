@@ -19,3 +19,6 @@
 [submodule "puppet/modules/maven"]
 	path = puppet/modules/maven
 	url = https://github.com/7terminals/puppet-maven
+[submodule "puppet/modules/wget"]
+	path = puppet/modules/wget
+	url = https://github.com/maestrodev/puppet-wget.git
