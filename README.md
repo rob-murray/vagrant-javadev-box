@@ -3,6 +3,7 @@ vagrant-javadev-box
 
 Build a basic Vagrant box set for Java development with Jdk, Postgres and Maven installed via puppet.
 
+This is intended as a base off which to add specific customisation; fork and adapt or use as is.
 
 ## Installed modules
 
@@ -39,7 +40,7 @@ You may want to edit Postgres config in the `puppet/manifests/base.pp` file.
 
 ## Changelog
 
-#### 09-04-2014
+#### 10-04-2014
 
 * Update Maven to 3.2.5
 * Automatically download the Maven binary

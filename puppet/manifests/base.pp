@@ -6,30 +6,31 @@
 # https://github.com/rob-murray/vagrant-javadev-box
 #
 include wget
+include maven
 
 # Install latest jdk
-class { 'java':
-  distribution => 'jdk',
-  version      => 'latest',
+class { "java":
+  distribution => "jdk",
+  version      => "latest",
 }
 
 # Postgresql general config
-class { 'postgresql':
-  version => '9.3',
+class { "postgresql":
+  version             => "9.3",
   manage_package_repo => true,
-  charset => 'UTF8',
-  locale  => 'en_US.UTF-8'
+  charset             => "UTF8",
+  locale              => "en_US.UTF-8"
 }
 
 # Postgresql server config
-class { 'postgresql::server':
+class { "postgresql::server":
   config_hash => {
-    'ip_mask_deny_postgres_user' => '0.0.0.0/32',
-    'ip_mask_allow_all_users'    => '0.0.0.0/0',
-    'listen_addresses'           => '*',
-    'manage_redhat_firewall'     => true,
-    'postgres_password'          => 'change_me',
-  },
+    "ip_mask_deny_postgres_user" => "0.0.0.0/32",
+    "ip_mask_allow_all_users"    => "0.0.0.0/0",
+    "listen_addresses"           => "*",
+    "manage_redhat_firewall"     => true,
+    "postgres_password"          => "change_me",
+  }
 }
 
 # Postgresql database config
@@ -47,13 +48,11 @@ wget::fetch { "download-maven-bin":
   require     => File[ "/puppet/maven/files" ]
 }
 
-include maven
-
 maven::setup { "maven":
-  ensure        => 'present',
-  source        => 'apache-maven-3.2.5-bin.tar.gz',
-  deploymentdir => '/home/vagrant/apache-maven',
-  user          => 'vagrant',
-  pathfile      => '/home/vagrant/.bashrc',
-  require => Wget::Fetch['download-maven-bin']
+  ensure        => "present",
+  source        => "apache-maven-3.2.5-bin.tar.gz",
+  deploymentdir => "/home/vagrant/apache-maven",
+  user          => "vagrant",
+  pathfile      => "/home/vagrant/.bashrc",
+  require       => Wget::Fetch[ "download-maven-bin" ]
 }
