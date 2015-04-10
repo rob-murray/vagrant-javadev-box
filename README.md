@@ -66,3 +66,9 @@ You may want to edit Postgres config in the `puppet/manifests/base.pp` file.
 ## Contributions
 
 Please use the GitHub pull-request mechanism to submit contributions.
+
+### License
+
+This project is available for use under the MIT software license.
+See LICENSE
+
