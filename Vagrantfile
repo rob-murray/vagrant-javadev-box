@@ -1,10 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
 #
 # Vagrant configuration for vagrant-jdev-box
-# @link
 # https://github.com/rob-murray/vagrant-javadev-box
 #
 Vagrant.configure("2") do |config|
@@ -23,6 +21,7 @@ Vagrant.configure("2") do |config|
 
   # Share the working dir - host, guest
   config.vm.synced_folder "project", "/vagrant"
+  config.vm.synced_folder "puppet/modules", "/puppet"
 
   config.vm.provision "shell", inline: "apt-get update --fix-missing"
 
