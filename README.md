@@ -25,7 +25,7 @@ All as git submodules unless otherwise stated. Also not listing dependancies, on
 
 ## Usage
 
-Feel free to customise further or use as is.
+Feel free to fork and customise further or use as is.
 
 The directory `project` is sync'd to `/vagrant` so place your code in there and hack away.
 
